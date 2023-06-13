@@ -1,0 +1,54 @@
+package com.example.a19ucs085;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText n1, n2;
+    TextView res;
+
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        n1 = findViewById(R.id.num1);
+        n2 = findViewById(R.id.num2);
+        res = findViewById(R.id.ans);
+
+    }
+    public void add(View view) {
+        float no1 = Float.parseFloat(n1.getText().toString());
+        float no2 = Float.parseFloat(n2.getText().toString());
+        float a = no1 +no2;
+        res.setText("Result = " +a);
+    }
+
+    public void sub(View view) {
+        float no1 = Float.parseFloat(n1.getText().toString());
+        float no2 = Float.parseFloat(n2.getText().toString());
+        float a = no1 - no2;
+        res.setText("Result = " +a);
+    }
+
+    public void mul(View view) {
+        float no1 = Float.parseFloat(n1.getText().toString());
+        float no2 = Float.parseFloat(n2.getText().toString());
+        float a = no1 * no2;
+        res.setText("Result = " + a);
+    }
+
+    public void div(View view) {
+        float no1 = Float.parseFloat(n1.getText().toString());
+        float no2 = Float.parseFloat(n2.getText().toString());
+        float a = no1 / no2;
+        res.setText("Result = " + a);
+    }
+}
